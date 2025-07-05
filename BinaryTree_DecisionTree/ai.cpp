@@ -33,3 +33,8 @@ Bot::Bot()
     this->_x = false;
     this->_y = false;
 }
+
+bool Bot::operator==(const Bot &Other)
+{
+    return ((this->_state == Other._state) && (this->_x == Other._x) && (this->_y == Other._y));
+}

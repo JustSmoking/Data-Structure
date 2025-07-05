@@ -9,6 +9,7 @@
             Bot(int, int, bool);
             void PrintBotInfo(); //debug
             Bot& operator=(const Bot &Other);
+            bool operator==(const Bot &Other);
         private:
             int _x;
             int _y;

@@ -62,3 +62,41 @@ void BinaryTree::PrefixPrint(BinaryTree *tree)
     }
     
 }
+
+void BinaryTree::SearchModifyResetValuePrincipe(BinaryTree *tree, Bot Ai)
+{
+    if (tree == nullptr)
+        return;
+
+    if (tree->_Ai == Ai)
+    {
+        std::cout << "Element trouve" << std::endl;
+        tree->_Ai = Bot();
+        return;
+    }
+    SearchModifyResetValuePrincipe(tree->_TreeLeft, Ai);
+    SearchModifyResetValuePrincipe(tree->_TreeRight, Ai);
+}
+
+
+bool BinaryTree::DeleteNode(BinaryTree *tree)
+{
+    if (tree == nullptr)
+    {
+        std::cout << "C'est bon" << std::endl;
+        return true;
+    }
+    
+    if (tree == this->_TreeLeft)
+    {
+        DeleteNode(this->_TreeLeft);
+        delete tree;
+    }
+
+    if (tree == this->_TreeRight)
+    {
+        DeleteNode(this->_TreeRight);
+        delete tree;
+    }
+    
+}

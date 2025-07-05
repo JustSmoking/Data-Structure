@@ -10,6 +10,8 @@
             static BinaryTree *Insert(BinaryTree*, BinaryTree*, Bot);
             static void Delete(BinaryTree*);
             static void PrefixPrint(BinaryTree*);
+            static void SearchModifyResetValuePrincipe(BinaryTree *, Bot);
+            bool DeleteNode(BinaryTree *Node);
 
 
         private:
